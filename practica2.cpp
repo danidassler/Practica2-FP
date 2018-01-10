@@ -46,7 +46,7 @@ int main(){
 				  if (colocados==4){
 					  winner=true;
 				     cout<< " Enhorabuena! Lo encontraste!"<<endl;
-				     cout<<" Te ha costado "<<intentos<<"intento(s)"<<endl;
+				     cout<<" Te ha costado "<<intentos<<" intento(s)"<<endl;
 				    }
 					intentos++;
 					colocados=0;
@@ -55,6 +55,8 @@ int main(){
 				if(intentos==16){
 				 cout<<" Has perdido , no has conseguido adivinar el codigo secreto !"<<endl;
 			    }
+				winner=false;
+				intentos=1;
 			}
 			break;
 			case 2: {
@@ -67,7 +69,7 @@ int main(){
 				  if (colocados==4){
 					 winner=true;
 				     cout<< " Enhorabuena! Lo encontraste!"<<endl;
-				     cout<<" Te ha costado "<<intentos<<"intento(s)"<<endl;
+				     cout<<" Te ha costado "<<intentos<<" intento(s)"<<endl;
 				    }
 					intentos++;
 					colocados=0;
@@ -76,6 +78,8 @@ int main(){
 				if(intentos==16){
 					cout<<" Has perdido , no has conseguido adivinar el codigo secreto !"<<endl;
 				}
+				winner=false;
+				intentos=1;
 			}
 			break;
 		}
@@ -234,7 +238,7 @@ void codigoAletorio(tCodigo codigoM, bool admiteRepetido){
 void introducirHipotesis(tCodigo hipotesis){
 	string cadena;
 	int longitud;
-	cout<<" Introduce el codigo (palabra de 4 letras con alguna de R(1), Z(2), V(3), A(4), M(5) o B(6): "<<endl;
+	cout<<" Introduce el codigo (palabra de 4 letras con alguna de R, Z, V, A, M o B: "<<endl;
 	cout<<" Codigo : ";
 	cin>>cadena;
 	longitud=cadena.length();
